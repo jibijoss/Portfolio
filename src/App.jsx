@@ -23,7 +23,7 @@ function Navbar({ onNavigate }) {
   return (
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="navbar__logo" onClick={() => scrollToSection("hero")}>
-        JJ<span className="logo-dot">.</span>
+        JJ
       </div>
 
       <button
@@ -70,7 +70,7 @@ function Hero({ onNavigate }) {
       <div className="hero__content">
         <p className="hero__greeting animate-fade-up">Hello, I'm</p>
         <h1 className="hero__name animate-fade-up delay-1">
-          Jibi Jos<span className="accent-dot">.</span>
+          Jibi Jos
         </h1>
         <p className="hero__title animate-fade-up delay-2">
           Programming Aspirant &amp; Web Developer
@@ -96,6 +96,9 @@ function Hero({ onNavigate }) {
           >
             View Projects ↗
           </button>
+            <a href="./public\Jibi jos cv.pdf" download className="btn btn--resume">
+    Download Resume ⬇
+  </a>
         </div>
 
         <div className="hero__social animate-fade-up delay-5">
@@ -168,7 +171,6 @@ function About() {
         <div className="about__grid">
           <div className="about__avatar-wrap">
             <div className="about__avatar">
-              <span>JJ</span>
               <div className="avatar__ring" />
             </div>
             <div className="about__location">
@@ -217,7 +219,7 @@ function About() {
               <div className="contact-item">
                 <span className="contact-item__label">Address</span>
                 <span className="contact-item__value">
-                  SGLRA 142, Kumarapuram, Medical College PO, Pin 695011
+                  SGLRA 142, Kumarapuram, Medical College PO, Thiruvananthapuram, PinCode 695011
                 </span>
               </div>
               <div className="contact-item">
@@ -269,7 +271,7 @@ function Education() {
             <div className="timeline__dot" />
             <div className="timeline__line" />
             <div className="timeline__card">
-              <span className="timeline__year">2025</span>
+              <span className="timeline__year">2026</span>
               <h3 className="timeline__degree">
                 MERN Stack Course (6 months)
               </h3>
@@ -317,7 +319,22 @@ function Education() {
               </p>
             </div>
           </div>
-
+        {/* Item 3 */}
+          <div className="timeline__item">
+            <div className="timeline__dot" />
+            <div className="timeline__line" />
+            <div className="timeline__card">
+              <span className="timeline__year">2021</span>
+              <h3 className="timeline__degree">10th Grade</h3>
+              <p className="timeline__inst">
+                Marion Villa Convent ISC School
+              </p>
+              <p className="timeline__detail">
+                Affiliated with CISCE (Council for the Indian School Certificate
+                Examinations).
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -332,7 +349,7 @@ function Skills() {
     <section className="section skills" id="skills">
       <div className="section__inner">
         <div className="section__tag">03 — Skills</div>
-        <h2 className="section__title">What I Work With</h2>
+        <h2 className="section__title">What I like to Work With</h2>
 
         <div className="skills__grid">
           
@@ -396,16 +413,6 @@ function Skills() {
 //  INTERNSHIP — internship experience section
 // ─────────────────────────────────────────────────────
 function Internship() {
-  const tools = [
-    "Python",
-    "pandas",
-    "NumPy",
-    "SciPy",
-    "Matplotlib",
-    "Scikit-learn",
-    "AI Basics",
-  ];
-
   return (
     <section className="section internship" id="internship">
       <div className="section__inner">
@@ -438,18 +445,19 @@ function Internship() {
           </p>
 
           <div className="internship__tools">
-            {tools.map((t) => (
-              <span className="tool-badge" key={t}>
-                {t}
-              </span>
-            ))}
+            <span className="tool-badge">Python</span>
+            <span className="tool-badge">pandas</span>
+            <span className="tool-badge">NumPy</span>
+            <span className="tool-badge">SciPy</span>
+            <span className="tool-badge">Matplotlib</span>
+            <span className="tool-badge">Scikit-learn</span>
+            <span className="tool-badge">AI Basics</span>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
 // ─────────────────────────────────────────────────────
 //  FOOTER — site footer
 // ─────────────────────────────────────────────────────
@@ -458,7 +466,7 @@ function Footer({ onNavigate }) {
     <footer className="footer">
       <div className="footer__inner">
         <div className="footer__brand">
-          JJ<span className="accent-dot">.</span>
+          JJ
         </div>
         <p className="footer__tagline">
           Building the web, one line at a time.
