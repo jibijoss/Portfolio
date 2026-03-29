@@ -96,7 +96,7 @@ function Hero({ onNavigate }) {
           >
             View Projects ↗
           </button>
-            <a href="./public\Jibi jos cv.pdf" download className="btn btn--resume">
+            <a href="./public\Jibi%jos%cv.pdf" download className="btn btn--resume">
     Download Resume ⬇
   </a>
         </div>
