@@ -147,6 +147,25 @@ function Hero({ onNavigate }) {
               <circle cx="4" cy="4" r="2" />
             </svg>
           </a>
+
+          <a
+  href="https://www.instagram.com/_jiby_jos/"
+  target="_blank"
+  rel="noreferrer"
+  className="social-link"
+  title="Instagram"
+>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37a4 4 0 1 1-7.75 1.27 4 4 0 0 1 7.75-1.27z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+</a>
         </div>
       </div>
 
@@ -522,33 +541,49 @@ function ProjectsPage({ onNavigate }) {
           <div className="section__tag">05 — Projects</div>
           <h2 className="section__title">My Projects</h2>
 
-          <div className="skills__grid">
+          <div className="skill__grid">
             <div className="skill-card">
-              <div className="skill-card__icon">💼</div>
+              <div className="skill-card__icon">PORTFOLIO </div>
               <h3 className="skill-card__category">Portfolio Website</h3>
               <p>
                 A personal portfolio website built using React and Vite to
-                showcase my skills, education, and projects.
+                showcase my skills, education, and projects.(this website)
               </p>
             </div>
 
             <div className="skill-card">
-              <div className="skill-card__icon">🛒</div>
-              <h3 className="skill-card__category">E-commerce UI</h3>
-              <p>
-                A responsive shopping website interface designed using HTML,
-                CSS, JavaScript, and React.
+              <div className="skill-card__icon">ROUTESAFE </div>
+              <h3 className="skill-card__category">ML Based Accident Risk Prediction System</h3>
+              <p>Developed a real-time road accident risk prediction system using Scikit-learn models for 
+                data analysis and prediction, integrated Google Maps API for location-based 
+                visualization, built a responsive frontend with HTML5, CSS3, JavaScript, and 
+                Bootstrap, and implemented backend functionality using Python and MySQL.Applied Scikit-learn models 
+                for data analysis and prediction. <br /> <br />
+                <span>Tech Stack: Python, MySQL, HTML, CSS, JavaScript, Bootstrap, Scikit-learn</span>
               </p>
             </div>
 
             <div className="skill-card">
-              <div className="skill-card__icon">📊</div>
-              <h3 className="skill-card__category">Python Mini Project</h3>
-              <p>
-                A basic data analysis project using Python libraries like
-                pandas, NumPy, and Matplotlib.
+              <div className="skill-card__icon">CONNECTA </div>
+              <h3 className="skill-card__category"> MERN Stack Social Networking Web Application</h3>
+              <p>Designed and developed a full-stack social media platform using the MERN stack,
+                 implementing secure user authentication and profile management, building a dynamic
+                  UI with sidebar navigation, search, and profile tabs, integrating REST APIs 
+                  for user data, posts, and media handling, and creating a responsive interface 
+                  for an improved user experience.  </p><br /><br />
+                  <span> Tech Stack: React.js, Node.js, Express.js, MongoDB, JavaScript, CSS</span>
+            </div>
+            <div className="skill-card">
+              <div className="skill-card__icon">DELIGHT </div>
+              <h3 className="skill-card__category">E-commerce Web Application</h3>
+              <p>Developed “DELIGHT,” a web-based ice cream selling application that serves as a 
+                connecting platform between the company owner and customers. Designed the website 
+                using HTML, CSS, and JavaScript, with MySQL integrated as the backend to manage content 
+                and updates efficiently. <br /> <br />
+                <span>Frontend:HTML,CSS,JavaScript. Backend/Database:MySQL</span>
               </p>
             </div>
+
           </div>
         </div>
       </section>
@@ -561,11 +596,41 @@ function ProjectsPage({ onNavigate }) {
 // ─────────────────────────────────────────────────────
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
+  const [showIntro, setShowIntro] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIntro(false);
+    }, 2500); // 2.5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
 
   function navigateTo(page) {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
+
+  if (showIntro) {
+  return (
+    <div className="intro-screen">
+      <div className="intro-content">
+        <h1 className="intro-title">Welcome to Jibi’s Portfolio</h1>
+        <p className="intro-subtitle">
+          Explore my journey, skills, and creative work
+        </p>
+        <div className="intro-line"></div>
+
+        <div className="intro-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  );
+}
 
   return (
     <div className="app-root">
