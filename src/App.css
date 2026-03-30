@@ -583,9 +583,9 @@ body {
 
 .about__avatar {
   width: 185px; height: 185px;
-  background-image: url('\Gemini_Generated_Image_xc0x9xxc0x9xxc0x.png');
+  background-image: url('/Gemini_Generated_Image_xc0x9xxc0x9xxc0x.png');
   background-size: cover;
-  background-position: center 20%;
+  background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
   position: relative;
