@@ -63,6 +63,9 @@ function Navbar({ onNavigate }) {
 function Hero({ onNavigate }) {
   return (
     <section className="hero" id="hero">
+      <video autoPlay loop muted playsInline className="bg-video">
+  <source src="/4822860-hd_1920_1080_30fps.mp4" type="video/mp4" />
+</video>
       <div className="hero__orb hero__orb--1" />
       <div className="hero__orb hero__orb--2" />
       <div className="hero__orb hero__orb--3" />
@@ -103,9 +106,11 @@ function Hero({ onNavigate }) {
 
         <div className="hero__social animate-fade-up delay-5">
           <a
-            href="mailto:jibijoss121@gmail.com"
-            className="social-link"
-            title="Email"
+             href="https://mail.google.com/mail/?view=cm&fs=1&to=jibijoss121@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+              title="Email"
           >
             <svg
               viewBox="0 0 24 24"
@@ -128,7 +133,22 @@ function Hero({ onNavigate }) {
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.05 3.37 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
           </a>
-
+          
+          <a href="https://github.com/jibijoss"
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+              title="GitHub"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.52c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              </a>
           <a
             href="https://www.linkedin.com/in/jibi-jos-6bb250392/"
             target="_blank"
@@ -596,15 +616,19 @@ function ProjectsPage({ onNavigate }) {
 // ─────────────────────────────────────────────────────
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIntro(false);
-    }, 2500); // 2.5 seconds
+useEffect(() => {
+  setTimeout(() => setShowIntro(true), 100); // ensures render first
+}, []);
 
-    return () => clearTimeout(timer);
-  }, []);
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setShowIntro(false);
+  }, 3500);
+
+  return () => clearTimeout(timer);
+}, []);
 
 
   function navigateTo(page) {
