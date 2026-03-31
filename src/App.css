@@ -517,12 +517,21 @@ body {
   animation: fadeIn 1s ease 2.1s both;
   z-index: 2;
 }
-.scroll-line {
-  width: 1px; height: 48px;
-  background: linear-gradient(to bottom, var(--steel), transparent);
-  animation: floatOrb 2.2s ease-in-out infinite;
-}
 
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-52px);
+  }
+}
+.scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--steel), transparent);
+  animation: moveUpDown 1.5s ease-in-out infinite;
+}
 /* ── SECTIONS — shared ─────────────────────────────────────────── */
 .section {
   padding: 100px 5vw;
@@ -578,14 +587,15 @@ body {
 
 .about__avatar-wrap {
   display: flex; flex-direction: column;
-  align-items: center; gap: 16px;
+  align-items: center; gap: 26px;
 }
 
 .about__avatar {
+
   width: 165px; height: 165px;
   background-image: url('/image.png');
   background-size: cover;
-  background-position: center;
+  background-position: center 10%;
   background-repeat: no-repeat;
   border-radius: 50%;
   position: relative;

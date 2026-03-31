@@ -2,10 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-app</title>
+
+    <!-- Browser tab title -->
+    <title>Jibi Jos Portfolio</title>
+
+    <!-- Optional CSS inside HTML -->
+    <style>
+      .jj-logo {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1B3A6B;
+        letter-spacing: -0.10em;
+        line-height: 1;
+        display: inline-block;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+
+      .jj-logo:hover {
+        color: #2E6DA4;
+        transform: scale(1.05);
+      }
+
+      .logo-dot {
+        color: #17A589;
+      }
+    </style>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

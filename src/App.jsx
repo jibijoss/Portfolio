@@ -363,7 +363,7 @@ function Education() {
             <div className="timeline__dot" />
             <div className="timeline__line" />
             <div className="timeline__card">
-              <span className="timeline__year">2021</span>
+              <span className="timeline__year">2020</span>
               <h3 className="timeline__degree">10th Grade</h3>
               <p className="timeline__inst">
                 Marion Villa Convent ISC School
@@ -549,7 +549,7 @@ function ProjectsPage({ onNavigate }) {
     <div className="projects-page">
       <nav className="navbar navbar--scrolled">
         <div className="navbar__logo" onClick={() => onNavigate("home")}>
-          JJ<span className="logo-dot">.</span>
+          JJ
         </div>
         <button className="btn btn--outline" onClick={() => onNavigate("home")}>
           ← Back Home
