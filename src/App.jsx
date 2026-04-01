@@ -243,7 +243,7 @@ function About() {
               <div className="contact-item">
                 <span className="contact-item__label">Email</span>
                 <a
-                  href="mailto:jibijoss121@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=jibijoss121@gmail.com"
                   className="contact-item__value"
                 >
                   jibijoss121@gmail.com
