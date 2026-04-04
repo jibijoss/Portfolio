@@ -210,8 +210,9 @@ function About() {
         <div className="about__grid">
           <div className="about__avatar-wrap">
             <div className="about__avatar">
-              <div className="avatar__ring" />
-            </div>
+  <img src="/image.png" alt="Jibi Jos" className="avatar__img" />
+  <div className="avatar__ring" />
+</div>
             <div className="about__location">
               <svg
                 viewBox="0 0 24 24"
@@ -292,6 +293,9 @@ function About() {
     </section>
   );
 }
+
+
+
 
 // ─────────────────────────────────────────────────────
 //  EDUCATION — academic background section
